@@ -1,0 +1,245 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arimo', sans-serif;
+}
+
+.addButton {
+    float: right;
+    margin-right: 20px;
+    margin-top: -28px;
+    background-color: black;
+    border-radius: 50%;
+    padding: 15px;
+    position: fixed;
+    right: 0;
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.75);
+}
+
+#addButtonImage {
+    width: 32px;
+}
+
+.submit {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 16px;
+}
+
+.highlight {
+    color: #f4f4f4;
+    -webkit-box-shadow: 0px 10px 26px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 26px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 26px -12px rgba(0, 0, 0, 0.75);
+}
+
+input.highlight {
+    color: #f4f4f4;
+    border: none;
+}
+
+input#taskName {
+    color: #291600;
+}
+
+#info {
+    color: grey;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+}
+
+.tile {
+    color: #291600;
+}
+
+@media screen and (max-width: 750px) {
+    .title {
+        font-size: 750%;
+    }
+    #page {
+        width: 85%;
+        margin-top: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #titleLogo {
+        width: 50px;
+        margin-top: -15px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .title {
+        font-size: 1500%;
+    }
+    #page {
+        width: 65%;
+        margin-top: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #titleLogo {
+        width: 75px;
+        margin-top: -30px;
+    }
+}
+
+.task {
+    border-bottom: 1px #291600 dotted;
+    padding-bottom: 10px;
+    font-size: 150%;
+    margin-top: 2px;
+}
+
+.tick {
+    cursor: pointer;
+    width: 32px;
+    float: right;
+    margin-top: 2px;
+}
+
+#inputPage {
+    position: fixed;
+    right: 0;
+    margin-right: 10px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-top: 100px;
+    padding-left: 10px;
+    background-color: #ffffff;
+    float: right;
+}
+
+#loginCard input {
+    margin: 20px;
+}
+
+#loginCard input:focus {
+    outline: none;
+}
+
+#loginCard input:not([type="submit"]) {
+    width: 100%;
+    background-color: #f4f4f4;
+    border: none;
+    color: #291600;
+    border-bottom: 1px #291600 solid;
+}
+
+#loginCard input[type="submit"] {
+    padding: 10px;
+}
+
+#loginCard table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logout {
+    float: left;
+    font-size: 100%;
+    margin-left: 25px;
+    margin-top: 15px;
+    left: 0;
+    cursor: pointer;
+    position: fixed;
+}
+
+#logout:hover {
+    text-decoration: underline;
+}
+
+.top-banner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#appTitle {
+    font-size: 36px;
+}
+
+#err {
+    color: red;
+}
+
+#optionsButton {
+    float: left;
+}
+
+@media screen and (min-width: 1100px) {
+    .createAccountPage {
+        width: 50%;
+        margin-left: -25%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .createAccountPage {
+        width: 80%;
+        margin-left: -40%;
+    }
+}
+
+.createAccountPage {
+    position: fixed;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    background-color: #f4f4f4;
+}
+
+#accountCard input {
+    margin-top: 20px;
+}
+
+#accountCard input:not([type="submit"]) {
+    width: 80%;
+    border: none;
+    color: #291600;
+    background-color: #f4f4f4;
+    border-bottom: 1px #291600 solid;
+}
+
+#accountCard input:focus {
+    outline: none;
+    border-width: 3px;
+}
+
+#accountCard input[type="submit"] {
+    padding: 10px;
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+#accountCard table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottomShawdow {
+    -webkit-box-shadow: 0px 10px 26px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 26px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 26px -12px rgba(0, 0, 0, 0.75);
+}
+
+#cancel {
+    cursor: pointer;
+    color: #3b8ec3;
+}
+
+#cancel:hover {
+    text-decoration: underline;
+    color: #3276a2;
+}
+
+#createAccountLink {
+    cursor: pointer;
+    color: #3b8ec3;
+}
+
+#createAccountLink:hover {
+    text-decoration: underline;
+    color: #3276a2;
+}
