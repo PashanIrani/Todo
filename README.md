@@ -1,2 +1,1 @@
-# Todo.sqlite
-Simple todo app
+# Todo
