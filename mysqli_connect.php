@@ -1,9 +1,12 @@
 <?php
-DEFINE ('DB_USER', 'main_user');
-define('DB_PASS', '8NLc8QLYijAzhOFl');
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'Todo');
+define('DB_USER', 'user');
+define('DB_PASS', 'password');
+define('DB_HOST', '127.0.0.1');
+define('DB_NAME', 'todo');
 
-$dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME)
-OR die('Could not connect to db' . mysqli_connect_error());
- ?>
+$dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+if (!$dbc) {
+    echo "Unable to connect to MySQL. " . mysqli_connect_errno() . " - " . mysqli_connect_error();
+    exit;
+}

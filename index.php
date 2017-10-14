@@ -1,4 +1,4 @@
-<?php include 'validate.php'; ?>
+<?php include 'mysqli_connect.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -20,24 +20,27 @@
 
 <body>
   <div class="title text-center">TODO<img id="titleLogo" src="images/done.png" /></div>
-  <form class="" action="index.html" method="post">
+
+  <form class="" action="login.php" method="POST">
 
   <div class="container">
     <div class="row">
       <div class="input-field col s6 offset-s3">
-        <input id="email" type="email" class="validate">
+        <input id="email" name="email" type="email" class="validate">
         <label for="email">Email</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s6 offset-s3">
-        <input id="email" type="email" class="validate">
+        <input id="password" name="password" type="password" class="validate">
         <label for="email">Password</label>
       </div>
     </div>
   </div>
 
-  <button class="btn waves-effect waves-light submitButton" type="submit" name="action">Login</button>
+  <div class="center">
+    <button class="btn waves-effect waves-light submitButton" type="submit" name="action">Login</button>
+  </div>
   </form>
 
 

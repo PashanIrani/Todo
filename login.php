@@ -1,10 +1,9 @@
 <?php
-/*
-* Author: Pashan Irani
-* Discription: Checks if login is valid.
-*/
-
 $email = $pass = $err = '';
+
+$sql = "SELECT email FROM user";
+$result = $dbc->query($sql);
+echo $result;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
