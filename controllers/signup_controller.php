@@ -1,3 +1,6 @@
 <?php
-
-# TODO: implment this, duh
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    // ...
+} else {
+    header('Location: ../views/login.php');
+}

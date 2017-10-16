@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
-    <title>Todo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="styles/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/done.png">
-</head>
+<?php include 'partials/header.php'; ?>
 
 <body>
     <!-- INPUT PAGE -->
@@ -35,11 +24,6 @@
         <div></div>
         <p id="info">Press the '+' to add a task!</p>
     </div>
-
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/randomColor.js"></script>
 </body>
 
 </html>
