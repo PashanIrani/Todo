@@ -13,6 +13,4 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-  <!-- Custom Scripts -->
-  <script type="text/javascript" src="../../js/main.js"></script>
 </head>

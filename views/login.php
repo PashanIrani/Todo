@@ -71,6 +71,7 @@
     <button class="btn waves-effect waves-light submitButton" type="submit" name="submit">Create Account</button>
   </div>
   </form>
+    <?php include 'partials/scripts.php'; ?>
 </body>
 
 </html>
