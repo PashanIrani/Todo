@@ -1,4 +1,7 @@
 <?php
+
+include_once 'mysqli_connect.php';
+
 $email = $pass = $err = '';
 
 $sql = "SELECT email FROM user";
