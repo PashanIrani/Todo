@@ -8,18 +8,18 @@ $('#createAccountForm').submit(function(e) {
         request.abort();
     }
 
-    var $form = $(this);
+    var form = $(this);
 
     //grabs all types of elements
-    var $inputs = $form.find("input, select, button, textarea");
+    var inputs = form.find("input, select, button, textarea");
 
-    var serializedData = $form.serialize();
+    var serializedData = form.serialize();
 
     //disables all inputs
-    $inputs.prop("disabled", true);
+    inputs.prop("disabled", true);
 
     //TODO: validate info
-    
+
     // Fire off the request to /form.php
     request = $.ajax({
         url: formatUrl("/controllers/signup_controller.php"),
@@ -29,11 +29,11 @@ $('#createAccountForm').submit(function(e) {
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
-        $inputs.prop("disabled", false);
+        inputs.prop("disabled", false);
     });
 
     request.fail(function (jqXHR, textStatus, errorThrown){
-        // TODO: add error message
+        $('#createAccountFormError').html(errorThrown);
     });
 
 });

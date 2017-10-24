@@ -18,16 +18,17 @@
         <input id="password" name="password" type="password" class="validate">
         <label for="email">Password</label>
       </div>
-  </div>
+    </div>
 
-  <div class="center">
-    <button class="btn waves-effect waves-light submitButton" type="submit" name="action">Login</button>
-  </div>
+    <div class="center">
+      <button class="btn waves-effect waves-light submitButton" type="submit" name="action">Login</button>
+    </div>
   </form>
 
   <hr>
   <form id="createAccountForm" action="" method="POST">
 
+    <div id="createAccountFormError" class="error"></div>
 
     <!-- First Name -->
     <div class="row">
@@ -36,7 +37,7 @@
         <label for="email">First Name</label>
       </div>
 
-    <!-- Last Name -->
+      <!-- Last Name -->
       <div class="input-field col s3 ">
         <input id="password" name="lastName" type="text" class="validate">
         <label for="email">Last Name</label>
@@ -67,11 +68,11 @@
       </div>
     </div>
 
-  <div class="center">
-    <button class="btn waves-effect waves-light submitButton" type="submit" name="submit">Create Account</button>
-  </div>
+    <div class="center">
+      <button class="btn waves-effect waves-light submitButton" type="submit" name="submit">Create Account</button>
+    </div>
   </form>
-    <?php include 'partials/scripts.php'; ?>
+  <?php include 'partials/scripts.php'; ?>
 </body>
 
 </html>
