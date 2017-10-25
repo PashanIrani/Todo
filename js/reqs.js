@@ -34,6 +34,7 @@ $('#createAccountForm').submit(function(e) {
 
     request.fail(function (jqXHR, textStatus, errorThrown){
         $('#createAccountFormError').html(errorThrown);
+        inputs.prop("disabled", false);
     });
 
 });
