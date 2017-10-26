@@ -18,14 +18,15 @@ $('#createAccountForm').submit(function(e) {
     //disables all inputs
     inputs.prop("disabled", true);
 
-    //TODO: validate info
-
-    // Fire off the request to /form.php
-    request = $.ajax({
-        url: formatUrl("/controllers/signup_controller.php"),
-        type: "post",
-        data: serializedData
-    });
+    if (validate(serializedData)) {
+      request = $.ajax({
+          url: formatUrl("/controllers/signup_controller.php"),
+          type: "post",
+          data: serializedData
+      });
+    } else {
+      showError('Passwords have to be same','#createAccountFormError');
+    }
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
@@ -33,8 +34,22 @@ $('#createAccountForm').submit(function(e) {
     });
 
     request.fail(function (jqXHR, textStatus, errorThrown){
-        $('#createAccountFormError').html(errorThrown);
+        showError(errorThrown,'#createAccountFormError');
         inputs.prop("disabled", false);
     });
 
 });
+
+function showError(str, id) {
+    var idIsNotGiven = id == '' || id == null;
+    console.log(idIsNotGiven);
+    id = !idIsNotGiven ? id : '#mainError'
+    console.log(id);
+    $(id).html(str);
+}
+
+function validate(get) {
+  var form = urltoJSON(get);
+
+  return form['password'] == form['c_password'];
+}
