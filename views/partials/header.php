@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="../../images/done.png">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="../../js/jquery-3.1.1.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="../../styles/materialize.css">
+  <script src="../../js/materialize.min.js" charset="utf-8"></script>
 
 </head>
