@@ -1,25 +1,13 @@
 <?php
 
 include_once 'mysqli_connect.php';
-
+include 'utils.php';
 $email = $pass = $err = '';
 
-$sql = "SELECT email FROM user";
-$result = $dbc->query($sql);
-echo $result;
+$sql = "SELECT * FROM user WHERE email";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = $_POST['email'];
-    $pass = $_POST['password'];
+$result = mysqli_query($dbc, $sql);
 
-    $err = check($email, $pass);
-}
+//TODO: implement login
 
-function check($e, $p)
-{
-    if (($e == 'a@a.a' && filter_var($e, FILTER_VALIDATE_EMAIL)) && $p == 'aaa') {
-        header('Location: /app.php');
-    } else {
-        return 'Incorrect Login Info';
-    }
-}
+$dbc->close();

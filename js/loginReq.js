@@ -1,6 +1,4 @@
-var request;
-
-$('#createAccountForm').submit(function(e) {
+$('#loginForm').submit(function(e) {
     event.preventDefault(); //stops errors, and posting form
 
     // Abort any pending request
@@ -18,9 +16,9 @@ $('#createAccountForm').submit(function(e) {
     //disables all inputs
     inputs.prop("disabled", true);
 
-    if (validate(serializedData)) {
+    if (serializedData) {
       request = $.ajax({
-          url: formatUrl("/controllers/signup_controller.php"),
+          url: formatUrl("/controllers/login_controller.php"),
           type: "post",
           data: serializedData
       });
@@ -30,26 +28,13 @@ $('#createAccountForm').submit(function(e) {
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
+      console.log(response);
         inputs.prop("disabled", false);
     });
 
     request.fail(function (jqXHR, textStatus, errorThrown){
-        showError(errorThrown,'#createAccountFormError');
+        console.log(errorThrown);
         inputs.prop("disabled", false);
     });
 
 });
-
-function showError(str, id) {
-    var idIsNotGiven = id == '' || id == null;
-    console.log(idIsNotGiven);
-    id = !idIsNotGiven ? id : '#mainError'
-    console.log(id);
-    $(id).html(str);
-}
-
-function validate(get) {
-  var form = urltoJSON(get);
-
-  return form['password'] == form['c_password'];
-}

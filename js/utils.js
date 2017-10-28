@@ -19,3 +19,9 @@ function urltoJSON(url) {
 
   return result;
 }
+
+function showError(str, id) {
+    var idIsNotGiven = id == '' || id == null;
+    id = !idIsNotGiven ? id : '#mainError';
+    $(id).html(str);
+}

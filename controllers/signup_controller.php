@@ -1,26 +1,27 @@
 <?php
 include_once 'mysqli_connect.php';
+include 'utils.php';
 
-$fields = array('firstName', 'lastName', 'email', 'password');
+$fname = isset($_POST['firstName']) ? $_POST['firstName'] : null;
+$lname = isset($_POST['lastName']) ? $_POST['lastName'] : null;
+$email = isset($_POST['email']) ? $_POST['email'] : null;
+$password = isset($_POST['password']) ? $_POST['password'] : null;
 
-for ($i=0; $i < sizeof($fields); $i++) {
-    if ($_POST[$i] === "" || $_POST[$i] === null) {
+$fields = array($fname, $lname, $email, $password);
+
+if (emptyString($fields)) {
         header("HTTP/1.0 422 Empty Input");
-    }
-}
-
-$fname = $bar = isset($_POST['firstName']) ? $_POST['firstName'] : null;
-$lname = $bar = isset($_POST['lastName']) ? $_POST['lastName'] : null;
-$email = $bar = isset($_POST['email']) ? $_POST['email'] : null;
-$password = $bar = isset($_POST['password']) ? $_POST['password'] : null;
-
-$sql = $dbc->prepare("INSERT INTO `users` (`email`, `password`, `firstname`, `lastname`) VALUES (?, ?, ?, ?)");
-$sql->bind_param("ssss", $email, $password, $fname, $lname);
-
-if ($sql->execute() === true) {
-    header("New record created successfully");
 } else {
-    header("Error: " . $sql . "<br>" . $dbc->error);
-}
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-$dbc->close();
+    $sql = $dbc->prepare("INSERT INTO `user` (`email`, `password`, `firstname`, `lastname`) VALUES (?, ?, ?, ?)");
+    $sql->bind_param("ssss", $email, $password_hash, $fname, $lname);
+
+    if ($sql->execute() === true) {
+        header("HTTP/1.0 200 New record created successfully");
+    } else {
+        header("HTTP/1.0 422 Error adding to DB");
+    }
+
+    $dbc->close();
+}

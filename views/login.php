@@ -3,7 +3,7 @@
 <body>
   <div class="title text-center">TODO<img id="titleLogo" src="../images/done.png" /></div>
 
-  <form class="" action="../controllers/login_controller.php" method="POST">
+  <form id="loginForm" action="" method="POST">
     <!-- Email -->
     <div class="row">
       <div class="input-field col s6 offset-s3">
@@ -85,7 +85,7 @@
     </form>
   </div>
 
-  <?php include 'partials/scripts.php'; ?>
+    <?php include 'partials/scripts.php'; ?>
 </body>
 
 </html>
