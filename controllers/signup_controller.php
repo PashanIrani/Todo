@@ -10,7 +10,7 @@ $password = isset($_POST['password']) ? $_POST['password'] : null;
 $fields = array($fname, $lname, $email, $password);
 
 if (emptyString($fields)) {
-        header("HTTP/1.0 422 Empty Input");
+        header("HTTP/1.0 400 Empty Input");
 } else {
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -20,7 +20,7 @@ if (emptyString($fields)) {
     if ($sql->execute() === true) {
         header("HTTP/1.0 200 New record created successfully");
     } else {
-        header("HTTP/1.0 422 Error adding to DB");
+        header("HTTP/1.0 400 Error adding to DB");
     }
 
     $dbc->close();

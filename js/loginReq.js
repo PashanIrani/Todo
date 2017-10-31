@@ -22,18 +22,15 @@ $('#loginForm').submit(function(e) {
           type: "post",
           data: serializedData
       });
-    } else {
-      showError('Passwords have to be same','#createAccountFormError');
     }
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
-      console.log(response);
         inputs.prop("disabled", false);
     });
 
     request.fail(function (jqXHR, textStatus, errorThrown){
-        console.log(errorThrown);
+      showError(errorThrown,'#loginError');
         inputs.prop("disabled", false);
     });
 

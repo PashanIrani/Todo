@@ -4,6 +4,7 @@
   <div class="title text-center">TODO<img id="titleLogo" src="../images/done.png" /></div>
 
   <form id="loginForm" action="" method="POST">
+    <div id="loginError" class="error"></div>
     <!-- Email -->
     <div class="row">
       <div class="input-field col s6 offset-s3">

@@ -43,6 +43,5 @@ $('#createAccountForm').submit(function(e) {
 
 function validate(get) {
   var form = urltoJSON(get);
-
   return form['password'] == form['c_password'];
 }
