@@ -12,7 +12,7 @@ function urltoJSON(url) {
 
   var result = {};
 
-  for (var prop in props){
+  for (var prop in props) {
     var attribute = props[prop]
     result[attribute.split('=')[0]] = attribute.split('=')[1];
   }
@@ -21,7 +21,13 @@ function urltoJSON(url) {
 }
 
 function showError(str, id) {
-    var idIsNotGiven = id == '' || id == null;
-    id = !idIsNotGiven ? id : '#mainError';
-    $(id).html(str);
+  var idIsNotGiven = id == '' || id == null;
+  id = !idIsNotGiven ? id : '#mainError';
+  if ($(id).html() == '') {
+    $(id).hide();
+  }
+  $(id).html(str);
+  if ($(id).is(":hidden")) {
+    $(id).slideDown('fast');
+  }
 }

@@ -1,0 +1,62 @@
+@import url( 'https://fonts.googleapis.com/css?family=Lato');
+
+.title {
+  width: 100%;
+  font-size: 125px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  color: #474747;
+  letter-spacing: 12px;
+}
+
+.error {
+  color: red;
+}
+
+body {
+  background-color: $background-color;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.120em;
+}
+
+.loginCard {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  border-radius: 10px;
+  z-index: 2;
+  background-color: $background-color;
+  position: relative;
+  @media #{$small-and-down} {
+    padding: 50px 20px;
+    width: 80%;
+  }
+  @media #{$medium-and-down} {
+    padding: 50px 20px;
+    width: 80%;
+  }
+  @media #{$medium-and-up} {
+    width: 60%;
+    padding: 70px;
+  }
+  @media #{$extra-large-and-up} {
+    width: 40%;
+    padding: 100px;
+  }
+}
+
+#loginError {
+  margin-top: -15px;
+}
+
+#loginBackgroundCard {
+  height: 45vh;
+  background-color: $primary-color;
+  z-index: 0;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
