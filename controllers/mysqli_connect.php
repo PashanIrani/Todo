@@ -7,6 +7,6 @@ define('DB_NAME', 'todo');
 $dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 if (!$dbc) {
-    echo "Unable to connect to MySQL. " . mysqli_connect_errno() . " - " . mysqli_connect_error();
+    error_log("Unable to connect to MySQL. " . mysqli_connect_errno() . " - " . mysqli_connect_error(), 0);
     exit;
 }

@@ -1,37 +1,38 @@
 $('#loginForm').submit(function(e) {
-    event.preventDefault(); //stops errors, and posting form
+  event.preventDefault(); //stops errors, and posting form
 
-    // Abort any pending request
-    if (request) {
-        request.abort();
-    }
+  // Abort any pending request
+  if (request) {
+    request.abort();
+  }
 
-    var form = $(this);
+  var form = $(this);
 
-    //grabs all types of elements
-    var inputs = form.find("input, select, button, textarea");
+  //grabs all types of elements
+  var inputs = form.find("input, select, button, textarea");
 
-    var serializedData = form.serialize();
+  var serializedData = form.serialize();
 
-    //disables all inputs
-    inputs.prop("disabled", true);
+  //disables all inputs
+  inputs.prop("disabled", true);
 
-    if (serializedData) {
-      request = $.ajax({
-          url: formatUrl("/controllers/login_controller.php"),
-          type: "post",
-          data: serializedData
-      });
-    }
-
-    // Callback handler that will be called on success
-    request.done(function (response, textStatus, jqXHR){
-        inputs.prop("disabled", false);
+  if (serializedData) {
+    request = $.ajax({
+      url: formatUrl("/controllers/login_controller.php"),
+      type: "post",
+      data: serializedData
     });
+  }
 
-    request.fail(function (jqXHR, textStatus, errorThrown){
-      showError(errorThrown,'#loginError');
-        inputs.prop("disabled", false);
-    });
+  // Callback handler that will be called on success
+  request.done(function(response, textStatus, jqXHR) {
+    hideError('#loginError');
+    window.location.replace('../views/app.php');
+  });
+
+  request.fail(function(jqXHR, textStatus, errorThrown) {
+    showError(errorThrown, '#loginError');
+    inputs.prop("disabled", false);
+  });
 
 });

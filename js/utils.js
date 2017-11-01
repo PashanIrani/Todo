@@ -31,3 +31,10 @@ function showError(str, id) {
     $(id).slideDown('fast');
   }
 }
+
+function hideError(id) {
+  $(id).html('');
+  if (!($(id).is(":hidden"))) {
+    $(id).slideUp('fast');
+  }
+}

@@ -1,5 +1,5 @@
 <?php include 'partials/header.php'; ?>
-
+<?php session_start(); ?>
 <body>
   <div class="title text-center">.todo.</div>
 
@@ -93,7 +93,7 @@
     </form>
   </div>
 
-  <?php include 'partials/scripts.php'; ?>
+    <?php include 'partials/scripts.php'; ?>
 </body>
 
 </html>

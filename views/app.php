@@ -1,5 +1,5 @@
 <?php include 'partials/header.php'; ?>
-
+<?php session_start(); ?>
 <body>
     <!-- INPUT PAGE -->
     <div class="highlight inputMenu" id="inputPage">
@@ -23,6 +23,7 @@
         <!-- DO NOT REMOVE THIS DIV, It is need to keep the list in order -->
         <div></div>
         <p id="info">Press the '+' to add a task!</p>
+        <?php echo $_SESSION['email']  . ' | ' . $_SESSION['password']?>
     </div>
 </body>
 
