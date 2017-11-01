@@ -1,6 +1,6 @@
 <?php include 'partials/header.php'; ?>
 <?php session_start(); ?>
-<?php include 'partials/constructUser.php'; ?>
+<?php include '../controllers/constructUser.php'; ?>
 <body>
 
 </body>

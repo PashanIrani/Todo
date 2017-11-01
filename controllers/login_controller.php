@@ -11,10 +11,6 @@ if (emptyString(array($email, $password))) {
         exit;
 }
 
-$sql = "SELECT * FROM user WHERE email";
-
-$result = mysqli_query($dbc, $sql);
-
 $sql = $dbc->prepare("SELECT password FROM user WHERE email=?");
 $sql->bind_param("s", $email);
 $sql->execute();
