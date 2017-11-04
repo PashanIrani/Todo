@@ -39,6 +39,7 @@ $('#createAccountForm').submit(function(e) {
         inputs.prop("disabled", false);
     });
 
+    inputs.prop("disabled", false);
 });
 
 function validate(get) {
