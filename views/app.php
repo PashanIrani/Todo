@@ -21,6 +21,7 @@
   </form>
 
     <?php include 'partials/scripts.php'; ?>
+      <script type="text/javascript" src="../../js/fetchTodoList.js"></script>
 </body>
 
 </html>
