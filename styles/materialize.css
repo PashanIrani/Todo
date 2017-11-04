@@ -6835,6 +6835,19 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/ }
 
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #a1a1a1; }
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #a1a1a1; }
+input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #a1a1a1; }
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #a1a1a1; }
+
 .title {
   width: 100%;
   font-size: 125px;
@@ -6889,5 +6902,17 @@ body {
   top: 0;
   left: 0;
   width: 100vw; }
+
+#addItemButton {
+  margin-top: 20px;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: none;
+  border: none; }
+  #addItemButton i {
+    margin: 10px auto auto; }
 
 /*# sourceMappingURL=materialize.css.map */

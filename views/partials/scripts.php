@@ -2,6 +2,7 @@
   <script type="text/javascript" src="../../js/main.js"></script>
   <script type="text/javascript" src="../../js/createAccountReq.js"></script>
   <script type="text/javascript" src="../../js/loginReq.js"></script>
+  <script type="text/javascript" src="../../js/addItemReq.js"></script>
   <script type="text/javascript" src="../../js/utils.js"></script>
 
 <script type="text/javascript">
