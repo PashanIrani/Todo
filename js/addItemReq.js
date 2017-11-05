@@ -15,19 +15,19 @@ $('#addItemForm').submit(function(e) {
 
   //disables all inputs
   inputs.prop("disabled", true);
-
-  if (serializedData) {
-    request = $.ajax({
-      url: formatUrl("/controllers/add_item_controller.php"),
-      type: "post",
-      data: serializedData
-    });
+    if (serializedData && validate(serializedData)) {
+      request = $.ajax({
+        url: formatUrl("/controllers/add_item_controller.php"),
+        type: "post",
+        data: serializedData
+      });
+  } else {
+    inputs.prop("disabled", false);
   }
-
   // Callback handler that will be called on success
   request.done(function(response, textStatus, jqXHR) {
     inputs.prop("disabled", false);
-    inputs.prop("value","");
+    inputs.prop("value", "");
   });
 
   request.fail(function(jqXHR, textStatus, errorThrown) {
@@ -35,3 +35,9 @@ $('#addItemForm').submit(function(e) {
   });
 
 });
+
+function validate(get) {
+  var form = urltoJSON(get);
+  console.log(form);
+  return form['item'] != "" && form['item'] != null && form['item'] != undefined;
+}
