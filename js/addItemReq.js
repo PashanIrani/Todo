@@ -24,6 +24,7 @@ $('#addItemForm').submit(function(e) {
   } else {
     inputs.prop("disabled", false);
   }
+  
   // Callback handler that will be called on success
   request.done(function(response, textStatus, jqXHR) {
     inputs.prop("disabled", false);

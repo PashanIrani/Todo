@@ -5,16 +5,16 @@ include 'utils.php';
 
 $id = $_SESSION['current_user_id'];
 
-$sql = $dbc->prepare("SELECT `text`, `status` FROM `todo_list` WHERE userId=?");
+$sql = $dbc->prepare("SELECT `id`, `text`, `status` FROM `todo_list` WHERE userId=?");
 $sql->bind_param("s", $id);
 $sql->execute();
 
 $sql->store_result();
-$sql->bind_result($text, $status);
+$sql->bind_result($id, $text, $status);
 
 $result = array();
 while ($sql->fetch()) {
-    array_push($result, array('text' => $text, 'status' => $status));
+    array_push($result, array('text' => $text, 'status' => $status, 'id'=>$id));
 }
 
 
