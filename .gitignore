@@ -22,5 +22,3 @@ Icon
 .sass-cache
 
 /vendor/
-
-composer.lock
