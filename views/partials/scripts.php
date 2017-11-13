@@ -6,10 +6,13 @@
   <script type="text/javascript" src="../../js/utils.js"></script>
   <script type="text/javascript" src="../../js/toggleItemStatus.js"></script>
   <script type="text/javascript" src="../../js/uiActions.js"></script>
+  <script type="text/javascript" src="../../js/logout.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
+
+  $(".button-collapse").sideNav();
 });
 </script>

@@ -1,5 +1,6 @@
 @import url( 'https://fonts.googleapis.com/css?family=Lato');
 
+$textColor: #474747;
 input {
   &::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
@@ -28,7 +29,7 @@ input {
   text-align: center;
   position: relative;
   z-index: 2;
-  color: #474747;
+  color: $textColor;
   letter-spacing: 12px;
 }
 
@@ -99,9 +100,36 @@ body {
 }
 
 #itemsView {
-
+  height: 80vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   .item{
     border-bottom: 1px solid #bababa;
-    padding: 25px 0px;
+    padding: 30px 0px;
   }
+}
+
+.checkBox {
+  color: $textColor;
+  float: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.deleteButton{
+  @extend .checkBox;
+  float: none;
+  display: inline;
+}
+
+.completedTask {
+  text-decoration: line-through;
+}
+
+.sideBarMsg {
+  line-height: 35px;
+  margin: 50px 0px;
+  font-size: 30px;
 }

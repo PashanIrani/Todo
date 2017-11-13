@@ -6,7 +6,7 @@ function addItemToView(text, status, id, view) {
     icon = "check_box";
   }
 
-  html += text + "<a onclick='toggleItem(" + id + "," + status + ")'><i class='material-icons'>" + icon + "</i></a></div><br />";
+  html += text + "<a class='checkBox' onclick='toggleItem(" + id + "," + status + ")'><i class='material-icons'>" + icon + "</i></a></div><br />";
 
   view.append(html);
 }
