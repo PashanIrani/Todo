@@ -15,14 +15,11 @@ function fetchTodoList() {
   request.done(function(response, textStatus, jqXHR) {
     var view = $("#itemsView");
     for (var i = 0; i < response.data.length; i++) {
-
-      // Rest of the code is VERY messy, woops :P
-      var html = "<div class='item'>"
       var text = response.data[i].text;
       var status = response.data[i].status;
       var id = response.data[i].id;
-      html += text + "<a onclick='toggleItem(" + id + "," + status + ")'>Toggle " +status+"</a></div><br />";
-      view.append(html);
+
+      addItemToView(text, status, id, view);
     }
   });
 

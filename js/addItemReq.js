@@ -24,11 +24,12 @@ $('#addItemForm').submit(function(e) {
   } else {
     inputs.prop("disabled", false);
   }
-  
+
   // Callback handler that will be called on success
   request.done(function(response, textStatus, jqXHR) {
     inputs.prop("disabled", false);
     inputs.prop("value", "");
+    fetchTodoList();
   });
 
   request.fail(function(jqXHR, textStatus, errorThrown) {
@@ -39,6 +40,5 @@ $('#addItemForm').submit(function(e) {
 
 function validate(get) {
   var form = urltoJSON(get);
-  console.log(form);
   return form['item'] != "" && form['item'] != null && form['item'] != undefined;
 }

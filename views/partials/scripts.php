@@ -5,6 +5,7 @@
   <script type="text/javascript" src="../../js/addItemReq.js"></script>
   <script type="text/javascript" src="../../js/utils.js"></script>
   <script type="text/javascript" src="../../js/toggleItemStatus.js"></script>
+  <script type="text/javascript" src="../../js/uiActions.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){

@@ -1,6 +1,9 @@
 function toggleItem(id, status) {
   event.preventDefault(); //stops errors, and posting form
 
+  var content = event.target.innerText;
+  var icon = event.target;
+
   // Abort any pending request
   if (request) {
     request.abort();
@@ -20,14 +23,13 @@ function toggleItem(id, status) {
     data: param
   });
 
+
   // Callback handler that will be called on success
   request.done(function(response, textStatus, jqXHR) {
-    console.log(textStatus);
-    fetchTodoList();
+    if (content == "check_box_outline_blank") {
+      $(icon).html("check_box");
+    } else {
+      $(icon).html("check_box_outline_blank");
+    }
   });
-
-  request.fail(function(jqXHR, textStatus, errorThrown) {
-    console.log(textStatus);
-  });
-
 }
