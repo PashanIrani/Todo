@@ -1,0 +1,12 @@
+{
+    "name": "pashan/todo",
+    "authors": [
+        {
+            "name": "Pashan Irani",
+            "email": "pashanirani@gmail.com"
+        }
+    ],
+    "require": {
+        "csanquer/pdo-service-provider": "~1.1dev"
+    }
+}

@@ -20,3 +20,7 @@ Icon
 .com.apple.timemachine.donotpresent
 
 .sass-cache
+
+/vendor/
+
+composer.lock
