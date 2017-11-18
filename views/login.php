@@ -25,7 +25,7 @@
       </div>
 
       <div class="center">
-        <button class="btn waves-effect waves-light submitButton" type="submit" name="action">Login</button>
+        <button class="btn waves-effect waves-light submitButton btn-outline" type="submit" name="action">Login</button>
         <div style="height: 25px"></div>
         <span>or</span>
         <div></div>

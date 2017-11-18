@@ -35,16 +35,16 @@
 // 1. Colors
 // ==========================================================================
 
-$primary-color: #006bb9 !default;
+$primary-color: #e26f06 !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: #00a4eb !default;
-$success-color: color("green", "base") !default;
-$error-color: color("red", "base") !default;
-$link-color: color("light-blue", "darken-1") !default;
+$secondary-color: #ff7a00 !default;
+$success-color: $secondary-color !default;
+$error-color: $secondary-color !default;
+$link-color: $secondary-color !default;
 
-$background-color: #edeaea;
+$background-color: #212121;
 // 2. Badges
 // ==========================================================================
 
@@ -78,7 +78,7 @@ $button-large-icon-font-size: 1.6rem !default;
 $button-large-height: $button-height * 1.5 !default;
 
 // Flat buttons
-$button-flat-color: #343434 !default;
+$button-flat-color: $secondary-color !default;
 $button-flat-disabled-color: lighten(#999, 10%) !default;
 
 // Floating buttons
@@ -250,8 +250,8 @@ $navbar-brand-font-size: 2.1rem !default;
 // ==========================================================================
 
 $sidenav-font-size: 14px !default;
-$sidenav-font-color: rgba(0,0,0,.87) !default;
-$sidenav-bg-color: #fff !default;
+$sidenav-font-color: $secondary-color !default;
+$sidenav-bg-color: $background-color !default;
 $sidenav-padding: 16px !default;
 $sidenav-item-height: 48px !default;
 $sidenav-line-height: $sidenav-item-height !default;

@@ -8,7 +8,7 @@
     <li>
       <div class="user-view">
         <div class="sideBarMsg">Welcome,<br>
-          <?php echo $_SESSION['current_user_first_name'] . " " . $_SESSION['current_user_last_name']?></div>
+            <?php echo $_SESSION['current_user_first_name'] . " " . $_SESSION['current_user_last_name']?></div>
       </div>
     </li>
     <li>
@@ -18,7 +18,7 @@
   </ul>
 
 
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+  <a id="hamburgerIcon" href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
   <form id="addItemForm" class="" action="" method="post">
 
@@ -37,7 +37,7 @@
   <div class="row">
     <div id="itemsView" class="col s8 offset-s2 m6 offset-m3 xl4 offset-xl4"></div>
   </div>
-  <?php include 'partials/scripts.php'; ?>
+    <?php include 'partials/scripts.php'; ?>
   <script type="text/javascript" src="../../js/fetchTodoList.js"></script>
 </body>
 
