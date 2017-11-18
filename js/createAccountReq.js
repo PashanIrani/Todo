@@ -18,7 +18,7 @@ $('#createAccountForm').submit(function(e) {
     //disables all inputs
     inputs.prop("disabled", true);
 
-    if (validate(serializedData)) {
+    if (validateSamePasswords(serializedData)) {
       request = $.ajax({
           url: formatUrl("/controllers/signup_controller.php"),
           type: "post",
@@ -42,7 +42,7 @@ $('#createAccountForm').submit(function(e) {
     inputs.prop("disabled", false);
 });
 
-function validate(get) {
+function validateSamePasswords(get) {
   var form = urltoJSON(get);
   return form['password'] == form['c_password'];
 }

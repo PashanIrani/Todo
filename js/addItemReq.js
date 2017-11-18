@@ -15,7 +15,7 @@ $('#addItemForm').submit(function(e) {
 
   //disables all inputs
   inputs.prop("disabled", true);
-    if (serializedData && validate(serializedData)) {
+    if (serializedData && validateAddItem(serializedData)) {
       request = $.ajax({
         url: formatUrl("/controllers/add_item_controller.php"),
         type: "post",
@@ -38,7 +38,7 @@ $('#addItemForm').submit(function(e) {
 
 });
 
-function validate(get) {
+function validateAddItem(get) {
   var form = urltoJSON(get);
   return form['item'] != "" && form['item'] != null && form['item'] != undefined;
 }
