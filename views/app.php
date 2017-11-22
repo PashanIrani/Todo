@@ -4,6 +4,7 @@
 
 <body>
 
+    <div class="stayTop">
   <ul id="slide-out" class="side-nav">
     <li>
       <div class="user-view">
@@ -33,7 +34,7 @@
       </button>
     </div>
   </form>
-
+  </div>
   <div class="row">
     <div id="itemsView" class="col s8 offset-s2 m6 offset-m3 xl4 offset-xl4"></div>
   </div>
