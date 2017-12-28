@@ -1,6 +1,6 @@
 <?php
 
-$is_Prod = 1;
+$is_Prod = 0;
 
 if ($is_Prod) {
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
